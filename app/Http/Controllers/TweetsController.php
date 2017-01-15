@@ -12,6 +12,8 @@ class TweetsController extends Controller
   {
 
    $tweets_array = [
+     'https://twitter.com/Iifeinword/status/818296061114466305',
+     'https://twitter.com/vibacy/status/820451325192220673',
      'https://twitter.com/jjjjcccjjf/status/820343169883586561',
      'https://twitter.com/moviepoets/status/817966563248705536',
      'https://twitter.com/insincere/status/813960416585977857',
@@ -36,6 +38,7 @@ class TweetsController extends Controller
      'https://twitter.com/jjjjcccjjf/status/817646342826840068',
      'https://twitter.com/jjjjcccjjf/status/817646276825247744',
      'https://twitter.com/jjjjcccjjf/status/817610542906896386',
+     'https://twitter.com/AdventureDreams/status/817596793018077188',
      'https://twitter.com/PoemPorns/status/816570036911476736',
      'https://twitter.com/jjjjcccjjf/status/816465794074673152',
      'https://twitter.com/jjjjcccjjf/status/816450979339997184',
