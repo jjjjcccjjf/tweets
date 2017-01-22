@@ -8,7 +8,7 @@ use App\Tweets;
 class TweetsController extends Controller
 {
 
-  public function showTweets()
+  public function show()
   {
 
    $tweets_array = [
@@ -66,8 +66,6 @@ class TweetsController extends Controller
 
    return view('tweets', ['html_tweets' => $html_tweets]);
 
-
   }
-
 
 }

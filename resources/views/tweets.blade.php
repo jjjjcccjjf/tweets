@@ -4,7 +4,7 @@
 <body>
   <div class="flex-center position-ref full-height" style="padding-bottom:50px;">
     <div class="center top-heading">
-      <h1>Sometimes I tweet stuff about you 😊😚😘😋</h1>
+            @include('shared.header')
     </div>
     <section id="pinBoot">
       <?php foreach ($html_tweets as $key => $value): ?>
