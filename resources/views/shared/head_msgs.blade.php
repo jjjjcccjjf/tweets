@@ -12,19 +12,27 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  
+
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
   <style>
 
     .top-heading{
-      color: white;
+      /*color: white;*/
       opacity: 0.9;
     }
     hr{
       margin-top: 10px;
       margin-bottom: 10px;
     }
-     a, a:hover, a:visited{
-      color: #FFF;
+
+    *{
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    a, a:hover, a:visited{
+      color: #000;
     }
 
   /*
@@ -35,9 +43,9 @@
 
   body {
 
-    background: #4568DC; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #4568DC , #B06AB3); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #4568DC , #B06AB3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: #4568DC; /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to left, #4568DC , #B06AB3); /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to left, #4568DC , #B06AB3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     margin: 50px;
   }
@@ -57,7 +65,7 @@
     background: white;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
     padding: 10px;
-    border-radius: 5px; 
+    border-radius: 5px;
   }
   /*
   stylize any heading tags withing white-panel below
@@ -70,7 +78,7 @@
     color: #A92733;
   }
   .white-panel:hover {
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.33);
     margin-top: -5px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
