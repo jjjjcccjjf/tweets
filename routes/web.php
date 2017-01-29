@@ -18,4 +18,8 @@ Route::post('/addMessage', [
     'uses' => 'MessagesController@addMessage',
     'as' => 'addMessage'
   ]);
+Route::post('/addComment', [
+    'uses' => 'MessagesController@addComment',
+    'as' => 'addComment'
+  ]);
 // Route::get('/', 'TweetsController@showTweets');
