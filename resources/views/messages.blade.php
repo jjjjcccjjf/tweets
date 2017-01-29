@@ -49,10 +49,10 @@
 						{{ $received_at[1] }}
 					</sub>
 						<hr>
-						<form action="{{ route('addComment') }}">
+						<form method="post" action="{{ route('addComment') }}">
 							<div class="form-group">
 								<input type="hidden" name="id" value="{{ $msg->id }}">
-								<textarea class="form-control" name="comment" placeholder="comment..." value="{{ $msg->comment or '' }}" ></textarea>
+								<textarea class="form-control" name="comment" placeholder="comment...">{{ $msg->comment or '' }}</textarea>
 							</div>
 							<div class="form-group">
 								<input class="btn btn-default" type="submit" value="Save ❤">
