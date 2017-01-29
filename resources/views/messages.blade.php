@@ -8,13 +8,7 @@
 <body>
 	<div class="flex-center position-ref full-height" style="padding-bottom:50px;">
 		<div class="center top-heading">
-			<h1>
-				<a href="{{ url('/messages') }}">Her messages</a> /
-				<a href="{{ url('/tweets') }}">My tweets for her</a>
-				 😊😚😘😋
-			<p style="font-size: 15px">{{ $_GET['add_msg'] or '' }}</p>
-			</h1>
-
+			@include('shared.header')
 			<div class="row">
 
 				<div class="col-md-4">
@@ -37,23 +31,37 @@
 					</form>
 				</div>
 				<div class="col-lg-8">
-					
+
 				</div>
 			</div>
 		</div>
 		<section id="pinBoot">
 
-		<?php foreach($msgs as $msg):
-		$received_at = explode(' ', $msg->received_at);
-		?>
-			<article class="white-panel">
-				<h4><?= $msg->body ?></h4>
-				<hr>
-				<sub><?= $received_at[0] . "<br/>" . $received_at[1] ?></sub>
-			</article>
-		<?php endforeach;?>
-		</section>
-	</div>
-	@include('shared.scripts')
-</body>
-</html>
+			<?php foreach($msgs as $msg):
+				$received_at = explode(' ', $msg->received_at); # just splitting the datetime here
+				?>
+				<article class="white-panel">
+					<h4>{{ $msg->body }}</h4>
+					<hr>
+					<sub>
+						{{  $received_at[0] }}
+						<br/>
+						{{ $received_at[1] }}
+					</sub>
+						<hr>
+						<form action="{{ route('addComment') }}">
+							<div class="form-group">
+								<input type="hidden" name="id" value="{{ $msg->id }}">
+								<textarea class="form-control" name="comment" placeholder="comment..." value="{{ $msg->comment or '' }}" ></textarea>
+							</div>
+							<div class="form-group">
+								<input class="btn btn-default" type="submit" value="Save ❤">
+							</div>
+						</form>
+					</article>
+				<?php endforeach;?>
+			</section>
+		</div>
+		@include('shared.scripts')
+	</body>
+	</html>

@@ -24,9 +24,22 @@ class MessagesController extends Controller
 			);
 
 		$message->_save();
-		
+
 		return redirect()->action(
 		    'MessagesController@show', ['add_msg' => 'Message saved']
-		); 
+		);
+	}
+
+	public function addComment(Request $request){
+		$message = new Message(
+			$request->input('id'),
+			$request->input('comment'),
+			);
+
+		$message->_saveComment();
+
+		return redirect()->action(
+		    'MessagesController@show', ['add_msg' => 'Comment saved']
+		);
 	}
 }
